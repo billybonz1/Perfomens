@@ -366,6 +366,18 @@ footer .city:after {
   .lSAction {
     left: 46.5%; } }
 
+@media only screen and (max-width: 1196px) {
+  .equipment {
+    padding-left: 50px; } }
+
+@media only screen and (max-width: 1162px) {
+  .equipment {
+    padding-left: 25px; } }
+
+@media only screen and (max-width: 1137px) {
+  .equipment {
+    padding-left: 0px; } }
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1140px) {
   .head-contact {
