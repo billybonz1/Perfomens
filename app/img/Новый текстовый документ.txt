@@ -1,0 +1,3 @@
+<div class="pix-per">
+		<img src="img/Bm-perfomance.jpg" alt="">
+	</div>

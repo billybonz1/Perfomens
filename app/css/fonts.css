@@ -1,5 +1,65 @@
 @font-face {
-  font-family: "RobotoRegular";
+  font-family: "FranckerCYR-CondensedReg";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype"); }
+  src: url("../fonts/FranckerCYR-CondensedReg/FranckerCYR-CondensedReg.eot?#iefix") format("embedded-opentype"), url("../fonts/FranckerCYR-CondensedReg/FranckerCYR-CondensedReg.woff") format("woff"), url("../fonts/FranckerCYR-CondensedReg/FranckerCYR-CondensedReg.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FranckerCYR-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FranckerCYR-Bold/FranckerCYR-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/FranckerCYR-Bold/FranckerCYR-Bold.woff") format("woff"), url("../fonts/FranckerCYR-Bold/FranckerCYR-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FranckerCYR-CondensedSmbold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FranckerCYR-CondensedSmbold/FranckerCYR-CondensedSmbold.eot?#iefix") format("embedded-opentype"), url("../fonts/FranckerCYR-CondensedSmbold/FranckerCYR-CondensedSmbold.woff") format("woff"), url("../fonts/FranckerCYR-CondensedSmbold/FranckerCYR-CondensedSmbold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FranckerCYR-CondensedBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FranckerCYR-CondensedBold/FranckerCYR-CondensedBold.eot?#iefix") format("embedded-opentype"), url("../fonts/FranckerCYR-CondensedBold/FranckerCYR-CondensedBold.woff") format("woff"), url("../fonts/FranckerCYR-CondensedBold/FranckerCYR-CondensedBold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Bebas_Neue_Cyrillic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Bebas_Neue_Cyrillic/Bebas_Neue_Cyrillic.eot?#iefix") format("embedded-opentype"), url("../fonts/Bebas_Neue_Cyrillic/Bebas_Neue_Cyrillic.woff") format("woff"), url("../fonts/Bebas_Neue_Cyrillic/Bebas_Neue_Cyrillic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "BebasNeueBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/BebasNeue Bold/BebasNeue Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue Bold/BebasNeue Bold.woff") format("woff"), url("../fonts/BebasNeue Bold/BebasNeue Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "BebasNeueBook";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/BebasNeue Book/BebasNeue Book.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue Book/BebasNeue Book.woff") format("woff"), url("../fonts/BebasNeue Book/BebasNeue Book.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "BebasNeueRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/BebasNeue Regular/BebasNeue Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue Regular/BebasNeue Regular.woff") format("woff"), url("../fonts/BebasNeue Regular/BebasNeue Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FranckerCYR-Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FranckerCYR-Light/FranckerCYR-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FranckerCYR-Light/FranckerCYR-Light.woff") format("woff"), url("../fonts/FranckerCYR-Light/FranckerCYR-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FranckerCYR-CondensedLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FranckerCYR-CondensedLight/FranckerCYR-CondensedLight.eot?#iefix") format("embedded-opentype"), url("../fonts/FranckerCYR-CondensedLight/FranckerCYR-CondensedLight.woff") format("woff"), url("../fonts/FranckerCYR-CondensedLight/FranckerCYR-CondensedLight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FranckerCYR-CondensedXLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FranckerCYR-CondensedXLight/FranckerCYR-CondensedXLight.eot?#iefix") format("embedded-opentype"), url("../fonts/FranckerCYR-CondensedXLight/FranckerCYR-CondensedXLight.woff") format("woff"), url("../fonts/FranckerCYR-CondensedXLight/FranckerCYR-CondensedXLight.ttf") format("truetype"); }

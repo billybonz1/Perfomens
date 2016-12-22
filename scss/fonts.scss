@@ -1,3 +1,13 @@
 @import "bourbon";
 
-@include font-face("RobotoRegular", "../fonts/RobotoRegular/RobotoRegular", $file-formats: eot woff ttf);
+@include font-face("FranckerCYR-CondensedReg", "../fonts/FranckerCYR-CondensedReg/FranckerCYR-CondensedReg", $file-formats: eot woff ttf);
+@include font-face("FranckerCYR-Bold", "../fonts/FranckerCYR-Bold/FranckerCYR-Bold", $file-formats: eot woff ttf);
+@include font-face("FranckerCYR-CondensedSmbold", "../fonts/FranckerCYR-CondensedSmbold/FranckerCYR-CondensedSmbold", $file-formats: eot woff ttf);
+@include font-face("FranckerCYR-CondensedBold", "../fonts/FranckerCYR-CondensedBold/FranckerCYR-CondensedBold", $file-formats: eot woff ttf);
+@include font-face("Bebas_Neue_Cyrillic", "../fonts/Bebas_Neue_Cyrillic/Bebas_Neue_Cyrillic", $file-formats: eot woff ttf);
+@include font-face("BebasNeueBold", "../fonts/BebasNeue Bold/BebasNeue Bold", $file-formats: eot woff ttf);
+@include font-face("BebasNeueBook", "../fonts/BebasNeue Book/BebasNeue Book", $file-formats: eot woff ttf);
+@include font-face("BebasNeueRegular", "../fonts/BebasNeue Regular/BebasNeue Regular", $file-formats: eot woff ttf);
+@include font-face("FranckerCYR-Light", "../fonts/FranckerCYR-Light/FranckerCYR-Light", $file-formats: eot woff ttf);
+@include font-face("FranckerCYR-CondensedLight", "../fonts/FranckerCYR-CondensedLight/FranckerCYR-CondensedLight", $file-formats: eot woff ttf);
+@include font-face("FranckerCYR-CondensedXLight", "../fonts/FranckerCYR-CondensedXLight/FranckerCYR-CondensedXLight", $file-formats: eot woff ttf);

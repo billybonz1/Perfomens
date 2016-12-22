@@ -2,53 +2,215 @@
 @import "vars.scss";
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 1261px){
+	.lSAction{
+		left: 43.5%;
+	}
 
+}
+@media only screen and (max-width : 1200px) {
+	.lSAction{
+		left: 46.5%;
+	}
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-	.wrapper{
-		width: auto;
+@media only screen and (max-width : 1140px) {
+	.head-contact{
+		padding-right: 50px;
 	}
-	.pad{
-		padding: 50px 5px !important;
+	.popup{
+		margin-right: 13px;
 	}
-	footer{
-		text-align: center;
-		.wrapper{
-			width: auto;
-		}
-		ul{
-			float: none;
-			display: inline-block;
-			text-align: center;
-			li{
-				margin-bottom: 10px;
-				margin-right: 0;
-				float: none;
-			}
-		}
-		.gs{
-			float: none;
-			display: block;
-		}
+	.head-pad{
+		padding-left: 50px;
 	}
 }
 
+
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 1136px) {
+	.request a{
+		margin-left: 40px;
+	}
 
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
-	.pad{
-		padding: 20px 5px !important;
+@media only screen and (max-width : 1121px) {
+	.request{
+		text-align: center;
 	}
-	// 100% ширина окна
-	// .fancybox-wrap{
-	// 	width: 100% !important;
-	// 	left: 0 !important;
-	// }
+	.request p{
+		float: none;
+		font-size: 1.9vw;
+	}
+	.request a{
+		margin-left: 0;
+		margin-top: 10px;
+		float: none;
+	}
+	.head-menu{
+		padding-left: 0;
+	}
+	.choice-item{
+		padding-bottom: 0;
+		margin-top: 35px;
+		img{
+			width: 100%;
+		}
+	}
+
+}
+
+@media only screen and (max-width : 991px){
+	.wrapp-bg{
+		text-align: center;
+	}
+	.head-pad{
+		padding-left: 0;
+		padding-bottom: 0;
+	}
+	.logo a{
+		padding-top: 30px;
+	}
+	.head-menu h1{
+		font-size: 6vw;
+	}
+	.head-menu ul{
+		display: none;
+	}
+	.toggle_mnu{
+		display: block !important;
+	}
+	.top_mnu ul{
+		display: block;
+	}
+	.sandwich.active .sw-topper{
+		left: 165px;
+	}
+	.sandwich.active .sw-bottom{
+		left: 165px;
+	}
+	.right-pad{
+		padding-left: 0;
+	}
+	.social{
+		text-align: center;
+	}
+	.social ul{
+		position: relative;
+		text-align: center;
+		margin-top: 20px;
+		top: auto;
+		left: auto;
+		display: inline-block;
+	}
+	.head-contact{
+		float: none !important;
+		text-align: center;
+		padding-right: 0;
+	}
+	.telefon{
+		display: inline-block;
+		width: 50%;
+	}
+	.telefon:after{
+		right: auto;
+		left: 57px;
+	}
+
+	.email{
+		display: inline-block;
+		width: 50%;
+	}
+	.email:after{
+		right: auto;
+		left: 57px;
+	}
+	.city{
+		display: inline-block;
+		width: 50%;
+	}
+	.city:after{
+		right:auto;
+		left: 59px;
+	}
+	.popup{
+		float: none !important;
+		margin: 0 auto;
+	}
+	.category-work{
+		display: block;
+		text-align: center;
+		padding-right: 0;
+		width: 99%;
+	}
+	.amenities{
+		max-width: inherit;
+	}
+	.choice{
+		max-width: inherit;
+	}
+	.choice-item p{
+		padding-bottom: 50px;
+	}
+	.slider{
+		min-height: auto;
+		padding-bottom: 25px;
+	}
+	.slider .equip-title{
+		position: relative;
+		text-align: center;
+		right: auto;
+		margin: 25px 0;
+	}
+	.autoWidth .active{
+		max-width: 315px !important;
+		width: 100%;
+		z-index: -1;
+		position: relative;
+		margin-right: 0 !important;
+		height: 235px;
+	}
+	.lSAction{
+		position: inherit;
+		left: auto;
+		top: -134px;
+	}
+	.lSAction > a{
+		position: absolute;
+		float: none;
+		display: block;
+	}
+	.shadow{
+		display: none;
+	}
+	.autoWidth .active img{
+		min-height: 235px;
+	}
+	.equipment{
+		padding-left: 0;
+	}
+	.pad-equip{
+		padding-left: 15px;
+	}
+	.pad-left{
+		padding-left: 15px !important;
+	}
+
+	.item-top{
+		padding: 0 55px 25px 55px !important;
+		vertical-align: top;
+		img{
+			padding: 10px 0 0 0 !important;
+		}
+		p{
+			padding: 15px 0 0 15px !important;
+			float: none !important;
+		}
+	}
+	.equip-title{
+		text-align: center;
+	}
 }
