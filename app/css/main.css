@@ -169,6 +169,7 @@ body textarea:required:valid {
   margin-right: 2px;
   padding: 0 37px 25px 37px;
   min-height: 272px;
+  max-height: 272px;
   margin-right: 5px; }
   .item-middle p {
     float: none;
@@ -197,7 +198,8 @@ body textarea:required:valid {
 .item-middle5 {
   padding: 0 66px 25px 66px;
   text-align: center;
-  min-height: 292px;
+  max-height: 272px;
+  min-height: 272px;
   margin-top: 33px;
   margin-right: 5px; }
   .item-middle5 span {
