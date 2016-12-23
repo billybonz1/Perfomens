@@ -1,12 +1,29 @@
 @import "bourbon";
 @import "vars.scss";
 
+@media only screen and (max-width : 1264px){
+  .equipment{
+    padding-left: 30px;
+  }
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1261px){
 	.lSAction{
 		left: 43.5%;
 	}
 
+}
+@media only screen and (max-width : 1253px){
+  .equipment{
+    padding-left: 0;
+  }
+  .item-middle{
+    padding: 0 45px 25px 45px;
+  }
+  .item-middle5{
+    padding: 0 75px 25px 75px;
+  }
+  text-align: center;
 }
 @media only screen and (max-width : 1200px) {
 	.lSAction{
@@ -213,17 +230,7 @@
 		padding-left: 15px !important;
 	}
 
-	.item-top{
-		padding: 0 55px 25px 55px !important;
-		vertical-align: top;
-		img{
-			padding: 10px 0 0 0 !important;
-		}
-		p{
-			padding: 15px 0 0 15px !important;
-			float: none !important;
-		}
-	}
+
 	.equip-title{
 		text-align: center;
 	}

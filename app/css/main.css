@@ -115,23 +115,31 @@ body textarea:required:valid {
   margin-top: 20px;
   margin-bottom: 95px; }
 
+.wid-top {
+  width: 49%; }
+
 .item-top {
-  padding-bottom: 53px;
-  display: inline-block;
+  float: left;
+  padding: 0 0px 53px 0px;
   vertical-align: top;
   position: relative;
-  margin-bottom: 50px;
-  padding-right: 23px;
+  margin-bottom: 80px;
   background-image: url("../img/border-item4.png");
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 100%;
   margin-right: 5px; }
+  .item-top p {
+    display: inline-block;
+    font-family: FranckerCYR-CondensedLight;
+    font-size: 17px;
+    padding-top: 97px;
+    padding-left: 60px; }
   .item-top:before {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 2px;
+    bottom: 1px;
     background-image: url("../img/bif-item.png");
     width: 27px;
     height: 52px; }
@@ -139,80 +147,67 @@ body textarea:required:valid {
     content: '';
     position: absolute;
     right: -28px;
-    bottom: 3px;
+    bottom: 0px;
     background-image: url("../img/aft-item.png");
     background-repeat: no-repeat;
     width: 30px;
     height: 59px; }
-  .item-top p {
-    float: left;
-    font-family: FranckerCYR-CondensedLight;
-    font-size: 17px;
-    padding-top: 97px;
-    padding-left: 38px;
-    padding-right: 40px; }
 
-.item-top-right {
-  position: relative;
-  padding-right: 43px;
-  padding-bottom: 55px; }
-  .item-top-right p {
-    padding-top: 93px;
-    padding-left: 38px;
-    padding-right: 64px; }
-  .item-top-right img {
-    padding-top: 34px; }
+.for-timg {
+  max-width: 244px;
+  display: inline-block;
+  width: 100%;
+  padding: 0 0px 25px 0px;
+  height: 197px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: right; }
 
 .item-middle {
   text-align: center;
-  padding-bottom: 78px;
-  padding-right: 7px;
-  margin-right: 2px; }
-  .item-middle img {
-    padding: 30px 0 0 17px; }
+  margin-right: 2px;
+  padding: 0 37px 25px 37px;
+  min-height: 272px;
+  margin-right: 5px; }
   .item-middle p {
     float: none;
-    padding-top: 54px;
-    padding-left: 46px; }
+    padding-top: 40px;
+    padding-left: 35px; }
   .item-middle span {
     color: #486273;
     font-size: 15px;
     font-family: FranckerCYR-CondensedLight;
     display: block;
     letter-spacing: -0.3px;
-    padding-right: 0px;
-    padding-top: 3px;
     line-height: 21px; }
+
+.middle-img {
+  padding: 0 25px 25px 25px;
+  max-width: 256px;
+  height: 138px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto; }
 
 .pad-equip {
   padding-left: 10px; }
 
-.item-middle1 {
-  padding-left: 0px;
-  padding-bottom: 34px; }
-  .item-middle1 img {
-    padding: 35px 10px 0 0; }
-  .item-middle1 p {
-    padding-top: 49px;
-    padding-left: 27px;
-    padding-right: 23px; }
-
-.item-middle2 {
-  padding-bottom: 55px; }
-  .item-middle2 p {
-    padding-top: 48px; }
-
-.item-middle3 {
-  padding-bottom: 51px;
-  padding-right: 37px; }
-  .item-middle3 p {
-    padding-top: 33px; }
-
 .item-middle5 {
-  padding: 0 55px 25px 55px;
-  margin-top: 33px; }
+  padding: 0 66px 25px 66px;
+  text-align: center;
+  min-height: 292px;
+  margin-top: 33px;
+  margin-right: 5px; }
   .item-middle5 span {
-    padding-bottom: 4px; }
+    padding-bottom: 4px;
+    color: #486273;
+    font-size: 15px;
+    font-family: FranckerCYR-CondensedLight;
+    display: block;
+    letter-spacing: -0.3px;
+    line-height: 21px; }
   .item-middle5 img {
     padding: 10px 0 0 0; }
   .item-middle5 p {
@@ -357,10 +352,23 @@ footer .city:after {
     text-align: right;
     letter-spacing: -0.2px; }
 
+@media only screen and (max-width: 1264px) {
+  .equipment {
+    padding-left: 30px; } }
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1261px) {
   .lSAction {
     left: 43.5%; } }
+
+@media only screen and (max-width: 1253px) {
+  .equipment {
+    padding-left: 0; }
+  .item-middle {
+    padding: 0 45px 25px 45px; }
+  .item-middle5 {
+    padding: 0 75px 25px 75px; }
+  text-align: center; }
 
 @media only screen and (max-width: 1200px) {
   .lSAction {
@@ -511,14 +519,6 @@ footer .city:after {
     padding-left: 15px; }
   .pad-left {
     padding-left: 15px !important; }
-  .item-top {
-    padding: 0 55px 25px 55px !important;
-    vertical-align: top; }
-    .item-top img {
-      padding: 10px 0 0 0 !important; }
-    .item-top p {
-      padding: 15px 0 0 15px !important;
-      float: none !important; }
   .equip-title {
     text-align: center; } }
 
