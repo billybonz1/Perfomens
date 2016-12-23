@@ -143,6 +143,14 @@
     left: 48.5%;
   }
 }
+@media only screen and (max-width : 1145px){
+  .choice{
+    max-width: 589px;
+  }
+  body .choice-telephone{
+    max-width: 589px;
+  }
+}
 @media only screen and (max-width : 1140px){
   .lSAction{
     left: 48.9%;
@@ -315,6 +323,9 @@
   }
 }
 @media only screen and (max-width : 991px){
+  body .choice-telephone{
+    max-width: inherit;
+  }
   #map{
     margin-left: 5px;
   }

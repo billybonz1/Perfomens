@@ -211,10 +211,16 @@ header {
 .amenities {
   max-width: 589px; }
 
+body .choice-telephone {
+  max-width: 276px;
+  width: 100%; }
+
 .choice {
   border: 1px solid #7400a5;
   margin-top: 27px;
-  max-width: 583px; }
+  max-width: 308px;
+  width: 100%;
+  display: inline-block; }
   .choice select {
     background-color: transparent;
     color: #fff;
@@ -225,6 +231,19 @@ header {
     font-family: FranckerCYR-CondensedLight;
     letter-spacing: -1px; }
     .choice select:focus {
+      border: none;
+      text-decoration: none; }
+  .choice a {
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 9.4px 16px;
+    font-size: 16px;
+    font-family: FranckerCYR-CondensedLight;
+    letter-spacing: -1px; }
+    .choice a:focus {
       border: none; }
 
 .select2-container--default.select2-container--focus .select2-selection--multiple {
