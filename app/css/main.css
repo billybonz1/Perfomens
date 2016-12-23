@@ -639,7 +639,8 @@ footer .city:after {
   .diag-popup {
     float: none !important; }
     .diag-popup p {
-      text-align: center; }
+      text-align: center;
+      padding-right: 0; }
   .but-reguest_bot {
     float: none !important;
     margin: 10px auto; }
@@ -727,7 +728,7 @@ footer .city:after {
     position: relative;
     text-align: center;
     right: auto;
-    margin: 25px 0; }
+    margin: 25px auto; }
   .autoWidth .active {
     max-width: 315px !important;
     width: 100%;
@@ -891,6 +892,10 @@ footer .city:after {
   .item-top p {
     font-size: 4.9vw;
     padding-top: 15px; } }
+
+@media only screen and (max-width: 392px) {
+  .diag-popup p {
+    font-size: 4vw; } }
 
 @media only screen and (max-width: 380px) {
   .request p {

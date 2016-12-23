@@ -275,16 +275,19 @@ body .choice-telephone{
       text-decoration: none;
     }
   }
-  a{
+  input{
     background-color: transparent;
     color: #fff;
     width: 100%;
     display: block;
     border: none;
-    padding: 9.4px 16px;
+    padding: 9px 16px;
     font-size: 16px;
     font-family:FranckerCYR-CondensedLight;
     letter-spacing: -1px;
+    @include placeholder{
+      color: #fff;
+    }
     &:focus{
       border: none;
     }
