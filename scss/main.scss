@@ -236,12 +236,13 @@ body textarea:required:valid{
     padding: 0 66px 25px 66px;
     text-align: center;
     max-height: 272px;
-    min-height: 272px;
+    min-height: 240px;
     margin-top: 33px;
     margin-right: 5px;
     span{
         padding-bottom: 4px;
         color: #486273;
+        text-align: center;
         font-size: 15px;
         font-family:FranckerCYR-CondensedLight;
         display:block;
@@ -276,8 +277,9 @@ body textarea:required:valid{
 
 .diagnostic{
     background-image: url("../img/bg-diag.jpg");
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .diag-title{
     padding-left: 16px;
