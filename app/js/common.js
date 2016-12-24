@@ -121,6 +121,7 @@ $(function() {
 	$('.autoWidth').lightSlider({
 		autoWidth:true,
 		loop:true,
+		auto:false,
 		slideMove:1,
 		pauseOnHover: true,
 		speed:400,
@@ -169,36 +170,20 @@ $(function() {
 
 
 
+	var workActive = $(".head-menu-ul li a.active").attr('href');
+	var workCurrent = "";
+	$(".head-menu-ul li a").on("click", function (e) {
+		var $this = $(this);
+		$(".head-menu-ul li a").removeClass("active");
+		$this.addClass("active");
+		$(workActive).fadeOut(600,function(){
+			workCurrent = $this.attr('href');
+			workActive = workCurrent;
+			$(workCurrent).fadeIn(600);
+			$(".work-block").removeClass(".work-active");
+		});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	});
 
 
 });

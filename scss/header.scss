@@ -91,7 +91,7 @@ header{
     color: #375162;
     padding-bottom: 22px;
     letter-spacing: 0.4px;
-    &:hover{
+    &:hover,&.active{
       color: #fff;
       text-decoration: none;
     }
@@ -127,6 +127,16 @@ header{
   background-image: url("../img/inst.png");
   background-repeat: no-repeat;
 }
+
+
+.work-block{
+  display: none;
+}
+.work-active{
+  display: block;
+}
+
+
 
 .pad-left{
   padding-left: 0 !important;
