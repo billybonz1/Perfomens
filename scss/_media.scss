@@ -739,6 +739,11 @@
     font-size:15vw;
   }
 }
+@media only screen and (max-width : 443px){
+  body .for-mob{
+    padding-top: 38px;
+  }
+}
 @media only screen and (max-width : 435px){
   .diag-title p{
     line-height: 46px;
@@ -780,5 +785,9 @@
   body .city:after{
     display: none;
   }
+
+}
+
+@media only screen and (max-width : 320px){
 
 }
