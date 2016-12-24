@@ -216,6 +216,8 @@ header {
 
 .amenities {
   max-width: 589px; }
+  .amenities form {
+    display: inline; }
 
 body .choice-telephone {
   max-width: 276px;
@@ -327,10 +329,11 @@ body .select2-container {
     letter-spacing: -0.7px;
     line-height: 20px;
     float: left; }
-  .request a {
-    margin-left: 49px;
+  .request button {
+    margin-left: 55px;
     display: block;
-    float: left; }
+    float: left;
+    background-color: transparent; }
 
 .but-reguest {
   padding: 12px 34px;

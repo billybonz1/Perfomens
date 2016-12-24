@@ -146,14 +146,19 @@
 												<option value="WY">Замена двигла</option>
 											</select>
 										</div>
-                                        <div class="choice choice-telephone">
-                                            <input type="text"  placeholder="Ваш телефон для связи...">
-                                        </div>
-										<div class="request">
-											<p>Оставьте заявку, мы перезвоним Вам<br>
-												и проконсультируем, дадим свои рекомендации</p>
-											<a href="#" class="but-reguest">Узнать стоимость и сроки</a>
-										</div>
+										<form action="">
+											<div class="choice choice-telephone">
+												<input type="hidden" name="project_name" value="StarSky">
+												<input type="hidden" name="admin_email" value="ElectroDeggi33759@yandex.ru">
+												<input type="hidden" name="form_subject" value="Узнать стоимость">
+												<input type="text"  class="" placeholder="Ваш телефон для связи..." required>
+											</div>
+											<div class="request">
+												<p>Оставьте заявку, мы перезвоним Вам<br>
+													и проконсультируем, дадим свои рекомендации</p>
+												<button name="send" id="inline" href="#data" class="but-reguest">Узнать стоимость и сроки</button>
+											</div>
+										</form>
 										<div class="choice-item">
 											<img src="img/zamena.png" alt="">
 											<p>Внешний тюнинг – это изменение внешнего вида автомобиля(бампер, спойлер, капот, обвес, зеркала, наклейки, аэрография и т.д.) По данным опроса на нашем сайте, внешний тюнинг является самым популярным направлением тюнинга. Практически каждый автолюбитель, хочет, что-либо изменить во внешнем виде своего авто и это понятно, ведь внешний тюнинг – это первое что бросается в глаза и тем самым показывает вашу индивидуальность.  Приятно смотреть на красивый автомобиль, но не все заводские авто смотрятся достаточно интересно, это всегда можно исправить. </p>
@@ -200,30 +205,25 @@
 
 	</header>
 	<section class="slider">
-		<div class="equip-title">
-			<h2>фотогаллерея</h2>
-			<p>нашего сервиса</p>
-		</div>
-		<div class="active-div"></div>
 		<ul class="autoWidth cs-hidden" >
 			<li class="1">
-				<img src="img/car.jpg" alt="">
+				<a  id="single_image" href="img/car.jpg"><img src="img/car.jpg" alt=""></a>
 				<div class="shadow"></div>
 			</li>
 			<li class="2">
-				<img src="img/car1.jpg" alt="">
+				<a id="single_image" href="img/car1.jpg"><img src="img/car1.jpg" alt=""></a>
 				<div class="shadow"></div>
 			</li>
 			<li class="3">
-				<img src="img/car2.jpg" alt="">
+				<a id="single_image" href="img/car2.jpg"><img src="img/car2.jpg" alt=""></a>
 				<div class="shadow"></div>
 			</li>
 			<li class="4">
-				<img src="img/car3.jpg" alt="">
+				<a id="single_image" href="img/car3.jpg"><img src="img/car3.jpg" alt=""></a>
 				<div class="shadow"></div>
 			</li>
 			<li class="5">
-				<img src="img/car4.jpg" alt="">
+				<a id="single_image" href="img/car4.jpg"><img src="img/car4.jpg" alt=""></a>
 				<div class="shadow"></div>
 			</li>
 		</ul>
@@ -408,6 +408,12 @@ AIzaSyBt9BGkbh4H8EpOcn0vi_VoPrPHQzlIdRg&callback=initMap">
 			</div>
 		</div>
 	</section>
+
+
+
+	<div style="display:none" id="#ThankYou">
+		<div id="data">Спасибо за ответ!</div>
+	</div>
 
 
 
