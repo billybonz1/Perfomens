@@ -120,17 +120,26 @@ $(function() {
 
 	$('.autoWidth').lightSlider({
 		autoWidth:true,
-
 		loop:true,
 		slideMove:1,
 		pauseOnHover: true,
 		speed:400,
+		onSliderLoad: function(el){
+			var img = $(el).find("li.active img").attr("src");
+			$(".active-div").css({
+				"background-image": "url(" + img + ")"
+			})
+		},
 		onBeforeSlide: function (el) {
 			$('#current').text(el.getCurrentSlideCount());
+		},
+		onAfterSlide: function(el){
+			var img = $(el).find("li.active img").attr("src");
+			$(".active-div").css({
+				"background-image": "url(" + img + ")"
+			})
 		}
-
 	});
-
 
 
 
