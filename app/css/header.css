@@ -401,28 +401,66 @@ span.select2-container {
     text-align: justify; }
 
 .popup-window {
-  background: #fff;
+  background: transparent;
+  border: 1px solid #7400a5;
   padding: 20px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
   position: relative;
-  max-width: 300px;
+  max-width: 365px;
   text-align: center;
+  line-height: 30px;
   margin: 0 auto;
-  color: #000;
-  text-align: center; }
+  color: #fff; }
+  .popup-window p {
+    float: none; }
+  .popup-window h2 {
+    font-family: FranckerCYR-CondensedMedium;
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: -0.6px;
+    margin-top: 40px;
+    margin-bottom: 25px; }
+  .popup-window input {
+    margin-top: 0;
+    margin-bottom: 8px;
+    max-width: inherit;
+    font-size: 16px; }
   .popup-window input, .popup-window button {
-    color: #000; }
+    color: #fff; }
     .popup-window input::-webkit-input-placeholder, .popup-window button::-webkit-input-placeholder {
-      color: #000; }
+      color: #fff; }
     .popup-window input::-moz-placeholder, .popup-window button::-moz-placeholder {
-      color: #000; }
+      color: #fff; }
     .popup-window input:-moz-placeholder, .popup-window button:-moz-placeholder {
-      color: #000; }
+      color: #fff; }
     .popup-window input:-ms-input-placeholder, .popup-window button:-ms-input-placeholder {
-      color: #000; }
+      color: #fff; }
   .popup-window button {
     float: none;
     display: inline-block;
     margin-left: 0; }
+
+.mfp-close-btn-in .mfp-close {
+  color: #fff; }
+
+.mfp-close {
+  font-size: 35px; }
+
+.popup-but-form {
+  font-size: 17px;
+  font-family: FranckerCYR-CondensedMedium;
+  padding: 8px 50px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  text-shadow: 0px 0px 7px black;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#64048c), to(#a137ce));
+  background: -webkit-linear-gradient(bottom, #64048c, #a137ce);
+  background: linear-gradient(to top, #64048c, #a137ce); }
+  .popup-but-form:hover {
+    background-color: #a137ce; }
 
 .cs-hidden {
   opacity: 0;

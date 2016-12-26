@@ -471,12 +471,14 @@ footer .city:after {
     right: 10%; } }
 
 @media only screen and (max-width: 991px) {
+  body .telefon {
+    padding-right: 0; }
   body .slider .equip-title {
     right: auto; }
   .active-div {
     display: none; }
   #map {
-    margin-left: 5px; }
+    margin-left: 0px; }
   footer .logo {
     left: inherit;
     position: relative; }
@@ -615,7 +617,7 @@ footer .city:after {
     margin-right: 0 !important;
     height: 235px; }
   .lSAction {
-    position: inherit;
+    position: static;
     left: auto;
     top: -134px; }
   .lSAction > a {
@@ -752,6 +754,10 @@ footer .city:after {
   .diag-title p {
     line-height: 46px; } }
 
+@media only screen and (max-width: 420px) {
+  body .for-mob {
+    padding-top: 59px; } }
+
 @media only screen and (max-width: 419px) {
   body .telefon:after {
     left: 5%; }
@@ -759,6 +765,10 @@ footer .city:after {
     left: 4.7%; }
   body .city:after {
     left: 5%; } }
+
+@media only screen and (max-width: 414px) {
+  body .for-mob {
+    padding-top: 36px; } }
 
 @media only screen and (max-width: 400px) {
   .item-top p {

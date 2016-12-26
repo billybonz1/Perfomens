@@ -63,3 +63,9 @@
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/FranckerCYR-CondensedXLight/FranckerCYR-CondensedXLight.eot?#iefix") format("embedded-opentype"), url("../fonts/FranckerCYR-CondensedXLight/FranckerCYR-CondensedXLight.woff") format("woff"), url("../fonts/FranckerCYR-CondensedXLight/FranckerCYR-CondensedXLight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FranckerCYR-CondensedMedium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FranckerCYR-CondensedMedium/FranckerCYR-CondensedMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/FranckerCYR-CondensedMedium/FranckerCYR-CondensedMedium.woff") format("woff"), url("../fonts/FranckerCYR-CondensedMedium/FranckerCYR-CondensedMedium.ttf") format("truetype"); }
