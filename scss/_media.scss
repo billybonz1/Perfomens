@@ -113,11 +113,33 @@
 
 }
 @media only screen and (max-width : 1145px){
-  .choice{
-    max-width: 589px;
+  .right-pad{
+    padding-left: 0;
   }
-  body .choice-telephone{
-    max-width: 589px;
+  .amenities{
+    form{
+      text-align: center;
+      span.select2-container{
+        text-align: left;
+      }
+    }
+  }
+  .choice{
+    min-width: 308px;
+  }
+  .request{
+    button{
+      float: none;
+      display: inline-block;
+      margin-left: 0;
+    }
+    p{
+      display: block;
+      float: none;
+    }
+  }
+  .choice-item{
+    margin-top: 55px;
   }
 }
 @media only screen and (max-width : 1140px){
@@ -161,10 +183,6 @@
 @media only screen and (max-width : 1121px) {
 	.request{
 		text-align: center;
-	}
-	.request p{
-		float: none;
-		font-size: 1.9vw;
 	}
 	.request a{
 		margin-left: 0;
@@ -276,9 +294,6 @@
   .active-div{
     display: none;
   }
-  body .choice-telephone{
-    max-width: inherit;
-  }
   #map{
     margin-left: 5px;
   }
@@ -364,23 +379,24 @@
 	.head-menu h1{
 		font-size: 6vw;
 	}
-	.head-menu ul{
-		display: none;
-	}
-	.toggle_mnu{
-		display: block !important;
-	}
-	.top_mnu ul{
-		display: block;
-	}
-	.sandwich.active .sw-topper{
-		left: 165px;
-	}
-	.sandwich.active .sw-bottom{
-		left: 165px;
-	}
+	.head-menu{
+      position: relative;
+      z-index: 2;
+      ul{
+        position: absolute;
+        background: rgba(0,0,0,1);
+        left: -155%;
+        top: 463px;
+        padding: 20px 20px 0px;
+        transition: .5s all;
+        &.swiped{
+          left: -15px;
+        }
+      }
+    }
 	.right-pad{
 		padding-left: 0;
+        text-align: center;
 	}
 	.social{
 		text-align: center;
@@ -425,6 +441,7 @@
 	}
 	.popup{
 		float: none !important;
+        display: inline-block;
 		margin: 0 auto;
 	}
 	.category-work{
@@ -432,18 +449,21 @@
 		text-align: center;
 		padding-right: 0;
 		width: 97%;
+        margin-top: 0;
+        padding-top: 105px;
+        position: relative;
 	}
+    .swipe-icon{
+      display: block;
+    }
 	.amenities{
-		max-width: inherit;
-	}
-	.choice{
 		max-width: inherit;
 	}
 	.choice-item p{
 		padding-bottom: 50px;
 	}
 	.slider{
-		min-height: auto;
+		min-height: unset;
 		padding-bottom: 25px;
 	}
 	.slider .equip-title{
@@ -490,12 +510,12 @@
 	.equip-title{
 		text-align: center;
 	}
-  .item-top{
-    text-align: left;
-  }
-  .item-middle{
-    text-align: center;
-  }
+    .item-top{
+      text-align: left;
+    }
+    .item-middle{
+      text-align: center;
+    }
 }
 
 @media only screen and (max-width : 935px){
@@ -535,11 +555,6 @@
   }
   body .city:after{
     left: 20px;
-  }
-}
-@media only screen and (max-width : 780px){
-  .request p{
-    font-size:2.4vw;
   }
 }
 @media only screen and (max-width : 745px){
@@ -615,11 +630,6 @@
   }
 }
 
-@media only screen and (max-width : 600px){
-  .request p{
-    font-size:3vw;
-  }
-}
 @media only screen and (max-width : 555px){
   .diag-img img{
     width: 100%;
@@ -649,9 +659,6 @@
 
 }
 @media only screen and (max-width : 475px){
-  .request p{
-    font-size:3.9vw;
-  }
   body .telefon:after{
     left: 10%;
   }
@@ -701,9 +708,6 @@
   }
 }
 @media only screen and (max-width : 380px){
-  .request p{
-    font-size:4.6vw;
-  }
   body .telefon:after{
     display: none;
   }
@@ -716,6 +720,14 @@
 
 }
 
-@media only screen and (max-width : 320px){
-
+@media only screen and (max-width : 342px){
+  body .choice{
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+  }
+  span.select2-container{
+    min-width: 290px;
+    max-width: 290px;
+  }
 }

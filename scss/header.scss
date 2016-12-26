@@ -1,6 +1,7 @@
 @import "bourbon";
 @import "vars.scss";
 @import "../libs/select2/dist/css/select2.min.css";
+@import "../libs/magnific-popup/dist/magnific-popup.css";
 @import "../libs/lightslider/dist/css/lightslider.min.css";
 
 
@@ -91,7 +92,7 @@ header{
     color: #375162;
     padding-bottom: 22px;
     letter-spacing: 0.4px;
-    &:hover,&.active{
+    &:hover,&.active,&:focus{
       color: #fff;
       text-decoration: none;
     }
@@ -254,15 +255,44 @@ header{
     font-family:FranckerCYR-CondensedSmbold;
     letter-spacing: -1.8px;
   }
-
 }
+
+@include keyframes(swipe-icon) {
+  0% {
+    transform: rotate(0deg);
+  }
+  10%{
+    transform: rotate(-30deg);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  30%{
+    transform: rotate(0deg);
+  }
+}
+
+.swipe-icon{
+  position: relative;
+  display: none;
+  svg{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 80px;
+    height: 80px;
+    @include animation(swipe-icon 3s ease-in infinite);
+    path{
+      fill: #fff;
+    }
+  }
+}
+
+
+
 
 .amenities{
   max-width: 589px;
-  form{
-    display: inline;
-
-  }
 }
 
 body .choice-telephone{
@@ -290,35 +320,34 @@ body .choice-telephone{
       text-decoration: none;
     }
   }
-  input{
-    background-color: transparent;
+}
+
+input.choice{
+  background-color: transparent;
+  color: #fff;
+  padding: 9px 16px 10px;
+  font-size: 16px;
+  font-family: FranckerCYR-CondensedLight;
+  letter-spacing: -1px;
+  @include placeholder{
     color: #fff;
-    width: 100%;
-    display: block;
-    border: none;
-    padding: 9px 16px;
-    font-size: 16px;
-    font-family:FranckerCYR-CondensedLight;
-    letter-spacing: -1px;
-    @include placeholder{
-      color: #fff;
-    }
-    &:focus{
-      border: none;
-    }
+  }
+  &:focus{
+    border: 1px solid #7400a5;
   }
 }
+
 
 .select2-container--default.select2-container--focus .select2-selection--multiple{
   background-color: transparent;
   border: none;
   color: #fff;
 }
- body .select2-container{
+span.select2-container{
   background-color: transparent;
-  padding: 10px 0px 6px 12px;
+  padding: 10px 0 6px 12px;
   letter-spacing: -1px;
-
+  min-width: 308px;
 }
 .select2-container--default .select2-selection--single{
   background-color: transparent;
@@ -388,7 +417,7 @@ body .choice-telephone{
   button{
     margin-left: 55px;
     display: block;
-    float: left;
+    float: right;
     background-color: transparent;
   }
 }
@@ -399,17 +428,18 @@ body .choice-telephone{
   border: 1px solid #00b4ff;
   border-radius: 5px;
   letter-spacing: 0.5px;
-  &:hover{
+  &:hover,&:focus{
     text-decoration: none;
     background-color: #00b4ff;
     color: #fff;
+    border: 1px solid #00b4ff;
   }
 }
 
 .choice-item{
   margin-top: 142px;
   position: relative;
-  padding-bottom: 155px;
+  padding-bottom: 78px;
   p{
     padding-top: 45px;
     padding-left: 3px;
@@ -421,164 +451,32 @@ body .choice-telephone{
 
 
 
-
-
-
-
-
-
-
-
-.toggle_mnu {
-  width: 60px;
-  height: 60px;
+.popup-window{
+  background: #fff;
+  padding: 20px;
   position: relative;
-  background-color: transparent;
-  z-index: 100;
-  border: none;
-  float: none;
-  margin: 0 auto;
-}
-.toggle_mnu span {
-  display: block; }
-
-.sandwich {
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  top: 8px;
-  bottom: 0;
-  left: -23px;
-  right: 0;
-  margin: auto;
-  z-index: 200; }
-
-.sw-topper {
-  position: relative;
-  top: 0;
-  width: 50px;
-  height: 5px;
-  background: white;
-  border: none;
-  border-radius: 4px 4px 4px 4px;
-  -webkit-transition: -webkit-transform 0.5s, top 0.2s;
-  transition: transform 0.5s, top 0.2s;
-  display: block; }
-
-
-.sw-bottom {
-  position: relative;
-  width: 50px;
-  height: 5px;
-  top: 6.6px;
-  background: white;
-  border: none;
-  border-radius: 4px 4px 4px 4px;
-  -webkit-transition: -webkit-transform 0.5s, top 0.2s;
-  transition: transform 0.5s, top 0.2s;
-  -webkit-transition-delay: 0.2s, 0s;
-  transition-delay: 0.2s, 0s; }
-
-.sw-footer {
-  position: relative;
-  width: 50px;
-  height: 5px;
-  top: 13.5px;
-  background: white;
-  border: none;
-  border-radius: 4px 4px 4px 4px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s; }
-
-.sandwich.active .sw-topper {
-  top: 9px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
-.sandwich.active .sw-bottom {
-  top: 6px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg); }
-.sandwich.active .sw-footer {
-  opacity: 0;
-  top: 0;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.top_mnu {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
-  z-index: 50;
-  right: 0;
-  top: 0;
-  display: none; }
-.top_mnu ul,
-.top_mnu li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0; }
-.top_mnu ul {
-  margin-top: 100px;
+  max-width: 300px;
   text-align: center;
-  -webkit-animation-duration: 0.01s;
-  animation-duration: 0.01s; }
-.top_mnu ul li:nth-child(1) a {
-  -webkit-animation-delay: 0;
-  animation-delay: 0; }
-.top_mnu ul li:nth-child(2) a {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s; }
-.top_mnu ul li:nth-child(3) a {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s; }
-.top_mnu ul li:nth-child(4) a {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s; }
-.top_mnu ul a {
-  color: #fff;
-  display: block;
-  text-transform: uppercase;
-  font-size: 20px;
-  position: relative;
-  height: 60px;
-  outline: none; }
-.top_mnu ul a span {
-  display: block;
-  position: relative;
-  top: -40px;
-  left: 0;
-  height: 100%;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-.top_mnu ul a span:hover {
-  background-color: rgba(255, 255, 255, 0.08); }
+  margin: 0 auto;
+  color: #000;
+  text-align: center;
+  input,button{
+    color: #000;
+    @include placeholder{
+      color: #000;
+    }
+  }
+  button{
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.cs-hidden{
+  opacity: 0;
+  visibility: hidden;
+}
 
 
 .pix-per{

@@ -23,36 +23,36 @@ body textarea:required:valid {
   color: #666; }
 
 .slider {
-  min-height: 591px;
-  position: relative; }
-
-.slider .active {
-  display: none; }
-
-.autoWidth li {
-  max-width: 319px;
-  width: 100%;
-  z-index: -1;
   position: relative;
-  margin-right: -6px !important; }
-  .autoWidth li:hover .shadow {
-    display: none; }
-  .autoWidth li img {
-    max-height: 235px; }
+  height: 274px; }
 
-.shadow {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.lSSlideOuter .lSPager, .lSSlideOuter .lightSlider {
-  height: auto !important; }
-
-.autoWidth .active .shadow {
-  display: none; }
+.autoWidth {
+  -webkit-transition: 10s -webkit-transform;
+  transition: 10s -webkit-transform;
+  transition: 10s transform;
+  transition: 10s transform, 10s -webkit-transform; }
+  .autoWidth li {
+    position: relative;
+    float: left; }
+    .autoWidth li img {
+      max-height: 235px; }
+    .autoWidth li:after {
+      -webkit-transition: .2s all;
+      transition: .2s all;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      visibility: visible;
+      background-color: rgba(0, 15, 25, 0.7); }
+    .autoWidth li:hover {
+      cursor: pointer; }
+      .autoWidth li:hover:after {
+        opacity: 0;
+        visibility: hidden; }
 
 .lSAction {
   float: right;
@@ -379,10 +379,23 @@ footer .city:after {
     padding-left: 25px; } }
 
 @media only screen and (max-width: 1145px) {
+  .right-pad {
+    padding-left: 0; }
+  .amenities form {
+    text-align: center; }
+    .amenities form span.select2-container {
+      text-align: left; }
   .choice {
-    max-width: 589px; }
-  body .choice-telephone {
-    max-width: 589px; } }
+    min-width: 308px; }
+  .request button {
+    float: none;
+    display: inline-block;
+    margin-left: 0; }
+  .request p {
+    display: block;
+    float: none; }
+  .choice-item {
+    margin-top: 55px; } }
 
 @media only screen and (max-width: 1139px) {
   .slider .equip-title {
@@ -409,9 +422,6 @@ footer .city:after {
 @media only screen and (max-width: 1121px) {
   .request {
     text-align: center; }
-  .request p {
-    float: none;
-    font-size: 1.9vw; }
   .request a {
     margin-left: 0;
     margin-top: 10px;
@@ -465,8 +475,6 @@ footer .city:after {
     right: auto; }
   .active-div {
     display: none; }
-  body .choice-telephone {
-    max-width: inherit; }
   #map {
     margin-left: 5px; }
   footer .logo {
@@ -526,18 +534,22 @@ footer .city:after {
       max-width: 320px; }
   .head-menu h1 {
     font-size: 6vw; }
-  .head-menu ul {
-    display: none; }
-  .toggle_mnu {
-    display: block !important; }
-  .top_mnu ul {
-    display: block; }
-  .sandwich.active .sw-topper {
-    left: 165px; }
-  .sandwich.active .sw-bottom {
-    left: 165px; }
+  .head-menu {
+    position: relative;
+    z-index: 2; }
+    .head-menu ul {
+      position: absolute;
+      background: black;
+      left: -155%;
+      top: 463px;
+      padding: 20px 20px 0px;
+      -webkit-transition: .5s all;
+      transition: .5s all; }
+      .head-menu ul.swiped {
+        left: -15px; }
   .right-pad {
-    padding-left: 0; }
+    padding-left: 0;
+    text-align: center; }
   .social {
     text-align: center; }
   .social ul {
@@ -571,20 +583,24 @@ footer .city:after {
     left: 59px; }
   .popup {
     float: none !important;
+    display: inline-block;
     margin: 0 auto; }
   .category-work {
     display: block;
     text-align: center;
     padding-right: 0;
-    width: 97%; }
+    width: 97%;
+    margin-top: 0;
+    padding-top: 105px;
+    position: relative; }
+  .swipe-icon {
+    display: block; }
   .amenities {
-    max-width: inherit; }
-  .choice {
     max-width: inherit; }
   .choice-item p {
     padding-bottom: 50px; }
   .slider {
-    min-height: auto;
+    min-height: unset;
     padding-bottom: 25px; }
   .slider .equip-title {
     position: relative;
@@ -651,10 +667,6 @@ footer .city:after {
   body .city:after {
     left: 20px; } }
 
-@media only screen and (max-width: 780px) {
-  .request p {
-    font-size: 2.4vw; } }
-
 @media only screen and (max-width: 745px) {
   body .telefon:after {
     left: 10px; }
@@ -700,10 +712,6 @@ footer .city:after {
   .item-top p {
     display: block; } }
 
-@media only screen and (max-width: 600px) {
-  .request p {
-    font-size: 3vw; } }
-
 @media only screen and (max-width: 555px) {
   .diag-img img {
     width: 100%; }
@@ -725,8 +733,6 @@ footer .city:after {
       font-size: 4vw; } }
 
 @media only screen and (max-width: 475px) {
-  .request p {
-    font-size: 3.9vw; }
   body .telefon:after {
     left: 10%; }
   body .email:after {
@@ -764,14 +770,21 @@ footer .city:after {
     font-size: 4vw; } }
 
 @media only screen and (max-width: 380px) {
-  .request p {
-    font-size: 4.6vw; }
   body .telefon:after {
     display: none; }
   body .email:after {
     display: none; }
   body .city:after {
     display: none; } }
+
+@media only screen and (max-width: 342px) {
+  body .choice {
+    width: 100%;
+    min-width: unset;
+    max-width: unset; }
+  span.select2-container {
+    min-width: 290px;
+    max-width: 290px; } }
 
 /* ============================ form css =========================== */
 #modal_callback_ok h3, #modal_callback_ok h4 {

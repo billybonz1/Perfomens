@@ -43,10 +43,11 @@ gulp.task('styles', function () {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'./app/libs/jquery/jquery-1.11.2.min.js',
-		'./app/libs/fancyBox/jquery.fancybox.js',
+		'./app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 		'./app/libs/plugins-scroll/plugins-scroll.js',
 		'./app/libs/select2/dist/js/select2.full.min.js',
-		'./app/libs/lightslider/dist/js/lightslider.min.js'
+		'./app/libs/lightslider/dist/js/lightslider.min.js',
+		"./app/libs/jquery-touchswipe/jquery.touchSwipe.min.js"
 		])
 		.pipe(concat('libs.js'))
 		//.pipe(uglify()) //Minify libs.js

@@ -8,16 +8,14 @@ $(function() {
 		}
 	} catch(err) {
 
-	};
+	}
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
-	// fancybox
-	$("a.modal").fancybox();
 
 
 //Форма отправки 2.0
-$(function() {
+	$(function() {
 	$("[name=send]").click(function () {
 		$(":input.error").removeClass('error');
 		$(".allert").remove();
@@ -65,12 +63,13 @@ $(function() {
 
 			$.ajax({
 				type: 'POST',
-				url: '/mail.php',
+				url: 'mail.php',
 				data: msg,
 				success: function(data) {
 					$.magnificPopup.close();
-					$("#ThankYou span").text(name);
 					$("a[href='#ThankYou']").click();
+					form[0].reset();
+					send_btn.attr('disabled', false);
 				},
 				error: function(xhr, str) {
 					alert('Возникла ошибка: ' + xhr.responseCode);
@@ -85,107 +84,79 @@ $(function() {
 	$(".js-example-basic-single").select2();
 
 
+	$.fn.sliderMove = function(width) {
+		width = parseInt(width);
+		var windowWidth = $(window).width();
+		var translate = width - windowWidth;
+		this.css({
+			"transform" : "translate3d(-"+ translate +"px,0,0)"
+		});
+	};
+
 	$('.autoWidth').lightSlider({
 		autoWidth:true,
-		loop:true,
+		loop: false,
 		auto:false,
+		slideMargin: 0,
 		slideMove:1,
 		pauseOnHover: true,
 		speed:400,
-		onSliderLoad: function(el){
-			var img = $(el).find("li.active img").attr("src");
-			$(".active-div").css({
-				"background-image": "url(" + img + ")"
-			})
-		},
-		onBeforeSlide: function (el) {
-			$('#current').text(el.getCurrentSlideCount());
-		},
-		onAfterSlide: function(el){
-			var img = $(el).find("li.active img").attr("src");
-			$(".active-div").css({
-				"background-image": "url(" + img + ")"
-			})
+		onSliderLoad: function (el) {
+			$(el).removeClass('cs-hidden');
+			var width = $(el).css("width");
+			$(el).sliderMove(width);
 		}
 	});
-
-
-
-
-	$(".toggle_mnu").click(function() {
-		$(".sandwich").toggleClass("active");
-	});
-
-	$(".top_mnu ul a").click(function() {
-		$(".top_mnu").fadeOut(600);
-		$(".sandwich").toggleClass("active");
-		$(".top_text").css("opacity", "1");
-	}).append("<span>");
-
-	$(".toggle_mnu").click(function() {
-		if ($(".top_mnu").is(":visible")) {
-			$(".top_text").css("opacity", "1");
-			$(".top_mnu").fadeOut(600);
-			$(".top_mnu li a").removeClass("fadeInUp animated");
-		} else {
-			$(".top_text").css("opacity", ".1");
-			$(".top_mnu").fadeIn(600);
-			$(".top_mnu li a").addClass("fadeInUp animated");
-		};
-	});
-
 
 
 
 	var workActive = $(".head-menu-ul li a.active").attr('href');
 	var workCurrent = "";
 	$(".head-menu-ul li a").on("click", function (e) {
+		e.preventDefault();
 		var $this = $(this);
-		$(".head-menu-ul li a").removeClass("active");
-		$this.addClass("active");
-		$(workActive).fadeOut(600,function(){
-			workCurrent = $this.attr('href');
-			workActive = workCurrent;
-			$(workCurrent).fadeIn(600);
-			$(".work-block").removeClass(".work-active");
-		});
-
+		workCurrent = $this.attr('href');
+		if($(workCurrent).length && workActive != workCurrent){
+			$(".head-menu-ul").removeClass("swiped");
+			$(".head-menu-ul li a").removeClass("active");
+			$this.addClass("active");
+			$(workActive).fadeOut(500,function(){
+				workActive = workCurrent;
+				$(workCurrent).fadeIn(500);
+				$(".work-block").removeClass(".work-active");
+			});
+		}
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-		/* This is basic - uses default settings */
-
-		$("a#single_image").fancybox();
-
-		/* Using custom settings */
-
-		$("a#inline").fancybox({
-			'hideOnContentClick': true
-		});
 
 		/* Apply fancybox to multiple items */
 
-		$("a.group").fancybox({
-			'transitionIn'	:	'elastic',
-			'transitionOut'	:	'elastic',
-			'speedIn'		:	600,
-			'speedOut'		:	200,
-			'overlayShow'	:	false
+		$(".fancybox").magnificPopup({
+			type: 'image',
+			gallery:{
+				enabled:true
+			},
+			callbacks: {
+				beforeOpen: function () {
+					this.disableOn = $(".autoWidth").hasClass("lsGrabbing") ? false : true;
+				}
+			}
 		});
 
+		$(".open-popup").magnificPopup({
+			type:'inline',
+			midClick: true
+		});
+		$(".category-work,.head-menu-ul").swipe( {
+			//Generic swipe handler for all directions
+			swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+				if(direction == "right"){
+					$(".head-menu-ul").addClass("swiped");
+				}else if(direction == "left"){
+					$(".head-menu-ul").removeClass("swiped");
+				}
 
-
+			}
+		});
 
 
 
