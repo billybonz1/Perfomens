@@ -16,71 +16,72 @@ $(function() {
 
 //Форма отправки 2.0
 	$(function() {
-	$("[name=send]").click(function () {
-		$(":input.error").removeClass('error');
-		$(".allert").remove();
+		$("[name=send]").click(function () {
+			$(":input.error").removeClass('error');
+			$(".allert").remove();
 
-		var error;
-		var btn = $(this);
-		var ref = btn.closest('form').find('[required]');
-		var msg = btn.closest('form').find('input, textarea');
-		var send_btn = btn.closest('form').find('[name=send]');
+			var error;
+			var btn = $(this);
+			var ref = btn.closest('form').find('[required]');
+			var msg = btn.closest('form').find('input, textarea');
+			var send_btn = btn.closest('form').find('[name=send]');
 
-		$(ref).each(function() {
-			if ($(this).val() == '') {
-				var errorfield = $(this);
-				$(this).addClass('error').parent('.field').append('<div class="allert"><span>Заполните это поле</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
-				error = 1;
-				$(":input.error:first").focus();
-				return;
-			} else {
-				var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-				if ($(this).attr("type") == 'email') {
-					if(!pattern.test($(this).val())) {
-						$("[name=email]").val('');
-						$(this).addClass('error').parent('.field').append('<div class="allert"><span>Укажите коректный e-mail</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
-						error = 1;
-						$(":input.error:first").focus();
+			$(ref).each(function() {
+				if ($(this).val() == '') {
+					var errorfield = $(this);
+					$(this).addClass('error').parent('.field').append('<div class="allert"><span>Заполните это поле</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
+					error = 1;
+					$(":input.error:first").focus();
+					return;
+				} else {
+					var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+					if ($(this).attr("type") == 'email') {
+						if(!pattern.test($(this).val())) {
+							$("[name=email]").val('');
+							$(this).addClass('error').parent('.field').append('<div class="allert"><span>Укажите коректный e-mail</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
+							error = 1;
+							$(":input.error:first").focus();
+						}
+					}
+					var patterntel = /^()[0-9]{9,18}/i;
+					if ( $(this).attr("type") == 'tel') {
+						var numberArr = $(this).val().match( /\d+/g );
+						var phone = numberArr.join("");
+						if(phone.length < 11) {
+							$(this).addClass('error').parent('.field').append('<div class="allert"><span>Укажите коректный номер телефона</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
+							error = 1;
+							$(":input.error:first").focus();
+						}
 					}
 				}
-				var patterntel = /^()[0-9]{9,18}/i;
-				if ( $(this).attr("type") == 'tel') {
-					if(!patterntel.test($(this).val())) {
-						$("[name=phone]").val('');
-						$(this).addClass('error').parent('.field').append('<div class="allert"><span>Укажите коректный номер телефона</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
-						error = 1;
-						$(":input.error:first").focus();
+			});
+			if(!(error==1)) {
+				$(send_btn).each(function() {
+					$(this).attr('disabled', true);
+				});
+
+				var form = btn.closest('form'), name = form.find('[name=name]').val();
+
+				$.ajax({
+					type: 'POST',
+					url: 'mail.php',
+					data: msg,
+					success: function(data) {
+						$.magnificPopup.close();
+						$("a[href='#ThankYou']").click();
+						form[0].reset();
+						send_btn.attr('disabled', false);
+					},
+					error: function(xhr, str) {
+						alert('Возникла ошибка: ' + xhr.responseCode);
 					}
-				}
+				});
 			}
+			return false;
 		});
-		if(!(error==1)) {
-			$(send_btn).each(function() {
-				$(this).attr('disabled', true);
-			});
-
-			var form = btn.closest('form'), name = form.find('[name=name]').val();
-
-			$.ajax({
-				type: 'POST',
-				url: 'mail.php',
-				data: msg,
-				success: function(data) {
-					$.magnificPopup.close();
-					$("a[href='#ThankYou']").click();
-					form[0].reset();
-					send_btn.attr('disabled', false);
-				},
-				error: function(xhr, str) {
-					alert('Возникла ошибка: ' + xhr.responseCode);
-				}
-			});
-		}
-		return false;
 	});
-});
 
-
+	$("input[name=phone]").inputmask("+7(999)-999-99-99");
 	$(".js-example-basic-single").select2();
 
 
@@ -88,8 +89,15 @@ $(function() {
 		width = parseInt(width);
 		var windowWidth = $(window).width();
 		var translate = width - windowWidth;
-		this.css({
+		var $this = this;
+		$this.css({
 			"transform" : "translate3d(-"+ translate +"px,0,0)"
+		});
+
+		$this.one("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+			$this.css({
+				"transform" : "translate3d(0px,0,0)"
+			});
 		});
 	};
 
@@ -121,9 +129,9 @@ $(function() {
 			$(".head-menu-ul li a").removeClass("active");
 			$this.addClass("active");
 			$(workActive).fadeOut(500,function(){
+				$(workActive).removeClass("work-active");
 				workActive = workCurrent;
 				$(workCurrent).fadeIn(500);
-				$(".work-block").removeClass(".work-active");
 			});
 		}
 	});
@@ -146,7 +154,7 @@ $(function() {
 			type:'inline',
 			midClick: true
 		});
-		$(".category-work,.head-menu-ul").swipe( {
+		$(".category-work,.head-menu-ul,.swipe-icon svg").swipe( {
 			//Generic swipe handler for all directions
 			swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
 				if(direction == "right"){
@@ -158,7 +166,9 @@ $(function() {
 			}
 		});
 
-
+		$(".swipe-icon svg").on("click", function () {
+			$(".head-menu-ul").addClass("swiped");
+		});
 
 
 });

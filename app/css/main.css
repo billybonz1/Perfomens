@@ -27,10 +27,10 @@ body textarea:required:valid {
   height: 274px; }
 
 .autoWidth {
-  -webkit-transition: 10s -webkit-transform;
-  transition: 10s -webkit-transform;
-  transition: 10s transform;
-  transition: 10s transform, 10s -webkit-transform; }
+  -webkit-transition: 20s -webkit-transform linear;
+  transition: 20s -webkit-transform linear;
+  transition: 20s transform linear;
+  transition: 20s transform linear, 20s -webkit-transform linear; }
   .autoWidth li {
     position: relative;
     float: left; }
@@ -55,13 +55,17 @@ body textarea:required:valid {
         visibility: hidden; }
 
 .lSAction {
-  float: right;
-  margin-right: 10%;
-  margin-top: 16px; }
+  float: none;
+  margin-top: 16px;
+  width: 100%;
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1052px; }
 
 .lSAction > a {
   position: static;
-  float: left;
+  display: inline-block;
   border: 1px solid #fff;
   width: 39px;
   height: 39px; }
@@ -538,7 +542,7 @@ footer .city:after {
     font-size: 6vw; }
   .head-menu {
     position: relative;
-    z-index: 2; }
+    z-index: 3; }
     .head-menu ul {
       position: absolute;
       background: black;
@@ -609,13 +613,6 @@ footer .city:after {
     text-align: center;
     right: auto;
     margin: 25px auto; }
-  .autoWidth .active {
-    max-width: 315px !important;
-    width: 100%;
-    z-index: -1;
-    position: relative;
-    margin-right: 0 !important;
-    height: 235px; }
   .lSAction {
     position: static;
     left: auto;
@@ -626,8 +623,6 @@ footer .city:after {
     display: block; }
   .shadow {
     display: none; }
-  .autoWidth .active img {
-    min-height: 235px; }
   .equipment {
     padding-left: 0; }
   .pad-equip {

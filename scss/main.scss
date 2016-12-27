@@ -41,7 +41,7 @@ body textarea:required:valid{
 
 
 .autoWidth {
-    transition: 10s transform;
+    transition: 20s transform linear;
     li{
         position: relative;
         float: left;
@@ -73,13 +73,17 @@ body textarea:required:valid{
 }
 
 .lSAction{
-    float: right;
-    margin-right: 10%;
+    float: none;
     margin-top: 16px;
+    width: 100%;
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1052px;
 }
 .lSAction>a{
     position: static;
-    float: left;
+    display: inline-block;
     border: 1px solid #fff;
     width: 39px;
     height: 39px;

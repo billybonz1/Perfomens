@@ -47,7 +47,8 @@ gulp.task('scripts', function() {
 		'./app/libs/plugins-scroll/plugins-scroll.js',
 		'./app/libs/select2/dist/js/select2.full.min.js',
 		'./app/libs/lightslider/dist/js/lightslider.min.js',
-		"./app/libs/jquery-touchswipe/jquery.touchSwipe.min.js"
+		"./app/libs/jquery-touchswipe/jquery.touchSwipe.min.js",
+		"./app/libs/jquery.inputmask/dist/jquery.inputmask.bundle.js"
 		])
 		.pipe(concat('libs.js'))
 		//.pipe(uglify()) //Minify libs.js

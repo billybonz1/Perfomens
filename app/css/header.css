@@ -1,6 +1,10 @@
 @import url(../libs/select2/dist/css/select2.min.css);
 @import url(../libs/magnific-popup/dist/magnific-popup.css);
 @import url(../libs/lightslider/dist/css/lightslider.min.css);
+.mfp-bg {
+  background: #000;
+  opacity: 0.9; }
+
 .inner {
   max-width: 1282px;
   margin: 0 auto; }
@@ -189,8 +193,12 @@ header {
     background: linear-gradient(to top, #64048c, #a137ce);
     font-family: FranckerCYR-CondensedSmbold; }
     .popup a:hover {
+      text-decoration: none; }
+    .popup a:focus, .popup a:active {
       text-decoration: none;
-      background-color: #a137ce; }
+      background: -webkit-gradient(linear, left bottom, left top, from(#9817ce), to(#58007d));
+      background: -webkit-linear-gradient(bottom, #9817ce 0%, #58007d 100%);
+      background: linear-gradient(to top, #9817ce 0%, #58007d 100%); }
 
 .category-work {
   font-family: FranckerCYR-CondensedXLight;
@@ -245,7 +253,8 @@ header {
 
 .swipe-icon {
   position: relative;
-  display: none; }
+  display: none;
+  z-index: 2; }
   .swipe-icon svg {
     position: absolute;
     left: 20px;

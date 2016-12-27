@@ -4,7 +4,10 @@
 @import "../libs/magnific-popup/dist/magnific-popup.css";
 @import "../libs/lightslider/dist/css/lightslider.min.css";
 
-
+.mfp-bg{
+  background: #000;
+  opacity: 0.9;
+}
 
 .inner{
 	max-width: 1282px;
@@ -226,7 +229,10 @@ header{
     font-family:FranckerCYR-CondensedSmbold;
     &:hover{
       text-decoration: none;
-      background-color: #a137ce ;
+    }
+    &:focus,&:active{
+      text-decoration: none;
+      background: linear-gradient(to top, #9817ce 0%, #58007d 100%);
     }
   }
 }
@@ -275,6 +281,7 @@ header{
 .swipe-icon{
   position: relative;
   display: none;
+  z-index: 2;
   svg{
     position: absolute;
     left: 20px;
